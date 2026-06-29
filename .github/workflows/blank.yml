@@ -1,0 +1,14 @@
+name: VM Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Check VM identity
+        run: |
+          echo "Running on VM:"
+          hostname
+          uname -a
