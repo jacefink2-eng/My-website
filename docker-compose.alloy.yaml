@@ -1,0 +1,8 @@
+services:
+  site:
+    image: busybox:1.36
+    working_dir: /workspace
+    network_mode: host
+    volumes:
+      - .:/workspace:ro
+    command: httpd -f -p 3000 -h /workspace
